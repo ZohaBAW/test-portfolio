@@ -1,30 +1,30 @@
 import { motion } from "motion/react";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { Github, Linkedin, Mail, MapPin, Code2, Heart } from "lucide-react";
+import { Avatar, AvatarFallback } from "../components/ui/avatar";
+import { Linkedin, Mail, MapPin, Code2, Heart } from "lucide-react";
 import { Button } from "../components/ui/button";
 
 const timeline = [
   {
-    year: "2024",
-    title: "Senior Full Stack Developer",
-    description: "Leading development of scalable web applications",
+    year: "2025–Present",
+    title: "Full Stack Web Trainer",
+    description: "Delivering comprehensive training in HTML, CSS, JavaScript, Next.js, React.js, Node.js, Python, Django, and Express.js at Zabeel International Institute, Dubai.",
+  },
+  {
+    year: "2022–2023",
+    title: "Front-End Developer at Prolance Services",
+    description: "Built responsive web interfaces with React.js, TypeScript, Material UI, and Mantine UI. Integrated REST APIs and contributed to CI/CD pipelines in Agile sprints.",
   },
   {
     year: "2022",
-    title: "IT Trainer & Mentor",
-    description: "Teaching modern web development to aspiring developers",
+    title: "Front-End Developer at ReformX Technologies",
+    description: "Developed internal tools and dashboards using React.js and Firebase; mentored junior developers on component architecture and frontend–backend integration.",
   },
   {
-    year: "2020",
-    title: "Full Stack Developer",
-    description: "Built enterprise solutions using React and Node.js",
-  },
-  {
-    year: "2018",
-    title: "Started Coding Journey",
-    description: "Fell in love with web development and never looked back",
+    year: "2018–2021",
+    title: "Bachelor of Computer Applications",
+    description: "Graduated from JSS College for Women, Mysore, India with a GPA of 8.4/10.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function About() {
             About Me
           </h1>
           <p className="text-muted-foreground text-lg">
-            Developer, Trainer, and Technology Enthusiast
+            Frontend Developer & Technology Enthusiast
           </p>
         </div>
 
@@ -52,34 +52,33 @@ export default function About() {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Avatar & Quick Info */}
               <div className="text-center space-y-4">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="inline-block"
-                >
+                <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
                   <Avatar className="w-48 h-48 border-4 border-purple-500/20">
-                    <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" />
                     <AvatarFallback className="text-4xl bg-gradient-to-br from-purple-500 to-pink-500 text-white">
-                      JD
+                      ZW
                     </AvatarFallback>
                   </Avatar>
                 </motion.div>
                 <div>
-                  <h2 className="text-2xl font-bold">John Doe</h2>
-                  <p className="text-muted-foreground">Full Stack Developer</p>
+                  <h2 className="text-2xl font-bold">Zoha Binte Abdul Wahid</h2>
+                  <p className="text-muted-foreground">Frontend Developer</p>
                   <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground mt-2">
                     <MapPin size={14} />
-                    San Francisco, CA
+                    Dubai, UAE
                   </div>
+                  <p className="text-sm text-muted-foreground mt-1">zohabawahid@gmail.com</p>
+                  <p className="text-sm text-muted-foreground">+971 50 360 7057</p>
                 </div>
                 <div className="flex justify-center gap-2">
-                  <Button size="icon" variant="outline">
-                    <Github size={18} />
+                  <Button size="icon" variant="outline" asChild>
+                    <a href="https://linkedin.com/in/zuhabaw" target="_blank" rel="noreferrer">
+                      <Linkedin size={18} />
+                    </a>
                   </Button>
-                  <Button size="icon" variant="outline">
-                    <Linkedin size={18} />
-                  </Button>
-                  <Button size="icon" variant="outline">
-                    <Mail size={18} />
+                  <Button size="icon" variant="outline" asChild>
+                    <a href="mailto:zohabawahid@gmail.com">
+                      <Mail size={18} />
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -92,14 +91,10 @@ export default function About() {
                     My Story
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    I'm a passionate Full Stack Developer and IT Trainer with over 6 years of experience
-                    building modern web applications. I love crafting beautiful, performant, and user-friendly
-                    interfaces while ensuring robust backend systems.
+                    Frontend-focused developer with 3 years of experience building responsive, accessible web applications using React.js, Next.js, and TypeScript. Skilled at translating UX/UI designs into reusable components and integrating frontends with REST APIs and content management systems.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-3">
-                    When I'm not coding, you'll find me teaching others, contributing to open source,
-                    or exploring the latest web technologies. I believe in continuous learning and
-                    sharing knowledge with the community.
+                    Strong focus on clean, maintainable code, performance, and cross-browser compatibility, with proven collaboration through code reviews, Agile delivery, and mentoring. Currently based in Dubai, delivering industry-aligned training as a Full Stack Web Trainer at Zabeel International Institute.
                   </p>
                 </div>
 
@@ -109,14 +104,14 @@ export default function About() {
                     Interests & Hobbies
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="secondary">🎮 Gaming</Badge>
-                    <Badge variant="secondary">📚 Reading Tech Blogs</Badge>
-                    <Badge variant="secondary">🎸 Playing Guitar</Badge>
-                    <Badge variant="secondary">✈️ Traveling</Badge>
-                    <Badge variant="secondary">📷 Photography</Badge>
+                    <Badge variant="secondary">👨‍🏫 Teaching & Mentoring</Badge>
+                    <Badge variant="secondary">📚 Learning New Technologies</Badge>
                     <Badge variant="secondary">🎨 UI/UX Design</Badge>
-                    <Badge variant="secondary">🏃‍♂️ Running</Badge>
-                    <Badge variant="secondary">☕ Coffee Tasting</Badge>
+                    <Badge variant="secondary">⚡ Performance Optimization</Badge>
+                    <Badge variant="secondary">🌐 API Integration</Badge>
+                    <Badge variant="secondary">♿ Web Accessibility</Badge>
+                    <Badge variant="secondary">🚀 Building Side Projects</Badge>
+                    <Badge variant="secondary">📖 Reading Tech Blogs</Badge>
                   </div>
                 </div>
 
@@ -124,10 +119,10 @@ export default function About() {
                   <h3 className="text-xl font-semibold mb-3">Core Values</h3>
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      { emoji: "💡", title: "Innovation", desc: "Always seeking better solutions" },
-                      { emoji: "🤝", title: "Collaboration", desc: "Teamwork makes the dream work" },
-                      { emoji: "📈", title: "Growth", desc: "Continuous learning mindset" },
-                      { emoji: "⚡", title: "Excellence", desc: "Quality in every detail" },
+                      { emoji: "💡", title: "Clean Code", desc: "Readable, reusable, maintainable" },
+                      { emoji: "🤝", title: "Collaboration", desc: "Agile delivery & code reviews" },
+                      { emoji: "📈", title: "Growth", desc: "Continuous learning & teaching" },
+                      { emoji: "⚡", title: "Performance", desc: "SEO, speed & cross-browser compat" },
                     ].map((value) => (
                       <motion.div
                         key={value.title}
@@ -150,9 +145,7 @@ export default function About() {
         <div>
           <h2 className="text-3xl font-bold mb-8 text-center">My Journey</h2>
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500 hidden md:block" />
-
             <div className="space-y-8">
               {timeline.map((item, index) => (
                 <motion.div
@@ -167,15 +160,13 @@ export default function About() {
                 >
                   <div className="flex-1" />
                   <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold shadow-lg">
-                      {item.year.slice(-2)}
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold shadow-lg text-xs text-center leading-tight px-1">
+                      {item.year.slice(0, 4)}
                     </div>
                   </div>
                   <Card className="flex-1 hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
-                      <div className="text-sm text-purple-500 font-semibold mb-2">
-                        {item.year}
-                      </div>
+                      <div className="text-sm text-purple-500 font-semibold mb-2">{item.year}</div>
                       <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                       <p className="text-muted-foreground">{item.description}</p>
                     </CardContent>

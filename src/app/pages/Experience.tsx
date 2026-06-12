@@ -5,64 +5,53 @@ import { Briefcase, Calendar, MapPin, Award } from "lucide-react";
 
 const experiences = [
   {
-    company: "Tech Innovators Inc.",
-    logo: "TI",
-    role: "Senior Full Stack Developer",
-    duration: "2024 - Present",
-    location: "San Francisco, CA",
+    company: "Zabeel International Institute",
+    logo: "ZI",
+    role: "Full Stack Web Trainer",
+    duration: "Sep 2025 – Present",
+    location: "Dubai, UAE",
     type: "Full-time",
     achievements: [
-      "Led a team of 5 developers in building a SaaS platform serving 10k+ users",
-      "Reduced API response time by 60% through optimization and caching strategies",
-      "Implemented CI/CD pipeline reducing deployment time from hours to minutes",
-      "Mentored junior developers and conducted code reviews",
+      "Delivering comprehensive training in HTML, CSS, JavaScript, Next.js, React.js, Node.js, Python, Django, and Express.js.",
+      "Guiding students through real-world project development, from UI design to backend integration.",
+      "Created structured lesson plans covering REST APIs, database management, and cloud deployment.",
+      "Mentoring students on debugging, code optimization, and industry-standard best practices.",
     ],
-    tech: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS", "Docker"],
+    tech: ["React.js", "Next.js", "Node.js", "Express.js", "Python", "Django", "JavaScript", "HTML5", "CSS3"],
   },
   {
-    company: "Code Academy Pro",
-    logo: "CA",
-    role: "IT Trainer & Curriculum Developer",
-    duration: "2022 - 2024",
-    location: "Remote",
-    type: "Contract",
-    achievements: [
-      "Trained 200+ students in modern web development technologies",
-      "Developed comprehensive curriculum for full stack bootcamp",
-      "Achieved 95% student satisfaction rating",
-      "Created 50+ tutorial videos with 100k+ views",
-    ],
-    tech: ["JavaScript", "React", "Express", "MongoDB", "Git"],
-  },
-  {
-    company: "Digital Solutions Ltd.",
-    logo: "DS",
-    role: "Full Stack Developer",
-    duration: "2020 - 2022",
-    location: "New York, NY",
+    company: "Prolance Services",
+    logo: "PS",
+    role: "Front-End Developer",
+    duration: "Jun 2022 – Sep 2023",
+    location: "India",
     type: "Full-time",
     achievements: [
-      "Built and maintained 15+ client projects from concept to deployment",
-      "Integrated third-party APIs including Stripe, SendGrid, and Twilio",
-      "Improved application performance by 40% through code optimization",
-      "Collaborated with design team to create pixel-perfect implementations",
+      "Developed and maintained responsive web interfaces using React.js, TypeScript, Material UI, and Mantine UI.",
+      "Created reusable and modular components, reducing frontend redundancy.",
+      "Integrated REST APIs via React Query and Redux Toolkit to deliver real-time dynamic dashboards.",
+      "Enhanced app navigation and forms for smoother user flow, cutting bounce rate.",
+      "Contributed to the development of WordPress websites, increasing site speed.",
+      "Played a key role in WordPress security, enhancing site protection and reducing vulnerabilities.",
+      "Conducted A/B tests on sites, improving conversion rates.",
+      "Partnered with backend engineers to ensure consistent API contracts and error-free integrations.",
+      "Contributed to CI/CD pipelines using Git and Bitbucket; participated in Agile sprints and managed tasks in Jira / Trello.",
     ],
-    tech: ["Vue.js", "Python", "Django", "MySQL", "Redis"],
+    tech: ["React.js", "TypeScript", "Material UI", "Mantine UI", "Redux Toolkit", "React Query", "WordPress", "Git", "Bitbucket"],
   },
   {
-    company: "StartUp Ventures",
-    logo: "SV",
-    role: "Junior Developer",
-    duration: "2018 - 2020",
-    location: "Austin, TX",
+    company: "ReformX Technologies",
+    logo: "RX",
+    role: "Front-End Developer",
+    duration: "Jan 2022 – May 2022",
+    location: "India",
     type: "Full-time",
     achievements: [
-      "Developed responsive web applications using modern frameworks",
-      "Participated in agile development process and daily standups",
-      "Fixed 100+ bugs and implemented new features based on user feedback",
-      "Learned best practices for clean code and software architecture",
+      "Developed internal tools and dashboards using React.js and Firebase to streamline company workflows.",
+      "Built reusable UI components and web applications using modern, component-based frontend patterns.",
+      "Mentored junior developers on component architecture and frontend–backend integration.",
     ],
-    tech: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    tech: ["React.js", "Firebase", "JavaScript", "HTML5", "CSS3"],
   },
 ];
 
@@ -74,7 +63,6 @@ export default function Experience() {
         animate={{ opacity: 1, y: 0 }}
         className="space-y-8"
       >
-        {/* Header */}
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
             Experience
@@ -84,9 +72,7 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* Experience Timeline */}
         <div className="relative">
-          {/* Vertical line */}
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500" />
 
           <div className="space-y-8">
@@ -99,7 +85,6 @@ export default function Experience() {
                 transition={{ delay: index * 0.1 }}
                 className="relative pl-20"
               >
-                {/* Timeline dot */}
                 <div className="absolute left-4 top-8 w-8 h-8 -translate-x-1/2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 border-4 border-background shadow-lg flex items-center justify-center">
                   <Briefcase size={14} className="text-white" />
                 </div>
@@ -108,11 +93,9 @@ export default function Experience() {
                   <CardHeader>
                     <div className="flex items-start justify-between flex-wrap gap-4">
                       <div className="flex items-start gap-4">
-                        {/* Company Logo */}
                         <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
                           {exp.logo}
                         </div>
-
                         <div>
                           <CardTitle className="text-2xl mb-2">{exp.role}</CardTitle>
                           <div className="text-lg font-semibold text-purple-500 mb-2">
@@ -130,7 +113,6 @@ export default function Experience() {
                           </div>
                         </div>
                       </div>
-
                       <Badge variant="secondary" className="bg-purple-500/10 text-purple-500">
                         {exp.type}
                       </Badge>
@@ -138,7 +120,6 @@ export default function Experience() {
                   </CardHeader>
 
                   <CardContent className="space-y-4">
-                    {/* Achievements */}
                     <div>
                       <div className="flex items-center gap-2 mb-3 text-sm font-semibold">
                         <Award size={16} className="text-yellow-500" />
@@ -161,7 +142,6 @@ export default function Experience() {
                       </ul>
                     </div>
 
-                    {/* Technologies */}
                     <div>
                       <div className="text-sm font-semibold mb-2">Technologies Used</div>
                       <div className="flex flex-wrap gap-2">
@@ -188,7 +168,6 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -196,10 +175,10 @@ export default function Experience() {
           className="grid md:grid-cols-4 gap-4 mt-12"
         >
           {[
-            { label: "Years Experience", value: "6+", icon: "⏱️" },
-            { label: "Projects Completed", value: "50+", icon: "🚀" },
-            { label: "Students Trained", value: "200+", icon: "👨‍🎓" },
-            { label: "Team Members Led", value: "15+", icon: "👥" },
+            { label: "Years Experience", value: "3+", icon: "⏱️" },
+            { label: "Projects Delivered", value: "20+", icon: "🚀" },
+            { label: "Companies Worked", value: "3", icon: "🏢" },
+            { label: "Students Mentored", value: "50+", icon: "👩‍🏫" },
           ].map((stat, index) => (
             <motion.div
               key={index}

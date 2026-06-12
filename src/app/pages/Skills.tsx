@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 import { Badge } from "../components/ui/badge";
 import { Progress } from "../components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
-import { Code2, Palette, Database, Wrench, Cloud, GitBranch } from "lucide-react";
+import { Code2, Palette, Database, Wrench, GitBranch } from "lucide-react";
 
 const skillCategories = {
   frontend: {
@@ -12,53 +12,59 @@ const skillCategories = {
     icon: Code2,
     color: "from-purple-500 to-pink-500",
     skills: [
-      { name: "React", level: 95, icon: "⚛️" },
-      { name: "TypeScript", level: 90, icon: "📘" },
-      { name: "Next.js", level: 85, icon: "▲" },
-      { name: "Tailwind CSS", level: 92, icon: "🎨" },
-      { name: "Vue.js", level: 75, icon: "💚" },
-      { name: "HTML/CSS", level: 98, icon: "🌐" },
+      { name: "React.js", level: 95, icon: "⚛️" },
+      { name: "Next.js", level: 88, icon: "▲" },
+      { name: "TypeScript", level: 85, icon: "📘" },
+      { name: "JavaScript (ES6+)", level: 95, icon: "💛" },
+      { name: "Redux / Redux Toolkit", level: 88, icon: "🔄" },
+      { name: "React Query", level: 85, icon: "🔍" },
+      { name: "HTML5", level: 98, icon: "🌐" },
+      { name: "CSS3", level: 95, icon: "🎨" },
+    ],
+  },
+  styling: {
+    title: "UI & Styling",
+    icon: Palette,
+    color: "from-pink-500 to-rose-500",
+    skills: [
+      { name: "TailwindCSS", level: 92, icon: "🎨" },
+      { name: "Material UI", level: 88, icon: "🔷" },
+      { name: "Mantine UI", level: 85, icon: "💜" },
+      { name: "Bootstrap", level: 82, icon: "🅱️" },
+      { name: "Responsive Design", level: 95, icon: "📱" },
+      { name: "Cross-Browser Compat.", level: 90, icon: "🌍" },
+      { name: "Web Accessibility", level: 82, icon: "♿" },
+      { name: "Framer Motion", level: 80, icon: "✨" },
     ],
   },
   backend: {
-    title: "Backend",
+    title: "Backend & Tools",
     icon: Database,
     color: "from-cyan-500 to-blue-500",
     skills: [
-      { name: "Node.js", level: 90, icon: "🟢" },
-      { name: "Express", level: 88, icon: "🚂" },
-      { name: "Python", level: 80, icon: "🐍" },
-      { name: "Django", level: 75, icon: "🎸" },
-      { name: "PostgreSQL", level: 85, icon: "🐘" },
-      { name: "MongoDB", level: 82, icon: "🍃" },
-    ],
-  },
-  tools: {
-    title: "Tools & DevOps",
-    icon: Wrench,
-    color: "from-pink-500 to-rose-500",
-    skills: [
-      { name: "Git", level: 95, icon: "📦" },
-      { name: "Docker", level: 80, icon: "🐳" },
-      { name: "AWS", level: 75, icon: "☁️" },
-      { name: "CI/CD", level: 78, icon: "🔄" },
-      { name: "Jest", level: 85, icon: "🃏" },
-      { name: "Webpack", level: 70, icon: "📦" },
+      { name: "Node.js", level: 80, icon: "🟢" },
+      { name: "Express.js", level: 78, icon: "🚂" },
+      { name: "REST APIs", level: 92, icon: "🔌" },
+      { name: "GraphQL", level: 72, icon: "◈" },
+      { name: "Strapi CMS", level: 88, icon: "📦" },
+      { name: "WordPress", level: 80, icon: "🌐" },
+      { name: "Firebase", level: 85, icon: "🔥" },
+      { name: "MongoDB", level: 78, icon: "🍃" },
     ],
   },
 };
 
 const tools = [
+  { name: "Git", category: "Version Control" },
+  { name: "Bitbucket", category: "Repository" },
+  { name: "Jira", category: "Project Mgmt" },
+  { name: "Trello", category: "Task Mgmt" },
+  { name: "Postman", category: "API Testing" },
   { name: "VS Code", category: "Editor" },
-  { name: "Figma", category: "Design" },
-  { name: "Postman", category: "API" },
-  { name: "GitHub", category: "Version Control" },
-  { name: "Vercel", category: "Deployment" },
-  { name: "Jira", category: "Project Management" },
-  { name: "Slack", category: "Communication" },
-  { name: "Notion", category: "Documentation" },
-  { name: "Chrome DevTools", category: "Debugging" },
-  { name: "Terminal", category: "CLI" },
+  { name: "CI/CD", category: "DevOps" },
+  { name: "MySQL", category: "Database" },
+  { name: "SEO", category: "Optimization" },
+  { name: "Cloud Deployment", category: "Hosting" },
 ];
 
 export default function Skills() {
@@ -71,7 +77,6 @@ export default function Skills() {
         animate={{ opacity: 1, y: 0 }}
         className="space-y-8"
       >
-        {/* Header */}
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
             Skills & Tools
@@ -81,7 +86,6 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Skill Categories */}
         <Tabs defaultValue="frontend" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8">
             {Object.entries(skillCategories).map(([key, category]) => {
@@ -130,11 +134,8 @@ export default function Skills() {
           ))}
         </Tabs>
 
-        {/* Tools Grid */}
         <div className="mt-12">
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Tools I Use Daily
-          </h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Tools I Use Daily</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {tools.map((tool, index) => (
               <motion.div
@@ -156,16 +157,15 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Skill Highlights */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="p-6 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20"
           >
             <Code2 className="text-purple-500 mb-3" size={32} />
-            <h3 className="text-xl font-bold mb-2">Clean Code</h3>
+            <h3 className="text-xl font-bold mb-2">Reusable Components</h3>
             <p className="text-muted-foreground text-sm">
-              Writing maintainable, scalable, and well-documented code following best practices
+              Building scalable, modular component libraries that reduce redundancy and speed up delivery
             </p>
           </motion.div>
 
@@ -174,9 +174,9 @@ export default function Skills() {
             className="p-6 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20"
           >
             <Palette className="text-cyan-500 mb-3" size={32} />
-            <h3 className="text-xl font-bold mb-2">UI/UX Focus</h3>
+            <h3 className="text-xl font-bold mb-2">SEO & Performance</h3>
             <p className="text-muted-foreground text-sm">
-              Creating beautiful, intuitive interfaces with attention to user experience
+              SEO-optimized, mobile-responsive layouts with smooth animations and fast load times
             </p>
           </motion.div>
 
@@ -184,50 +184,40 @@ export default function Skills() {
             whileHover={{ scale: 1.02 }}
             className="p-6 rounded-xl bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20"
           >
-            <Cloud className="text-pink-500 mb-3" size={32} />
-            <h3 className="text-xl font-bold mb-2">Modern Stack</h3>
+            <Wrench className="text-pink-500 mb-3" size={32} />
+            <h3 className="text-xl font-bold mb-2">API Integration</h3>
             <p className="text-muted-foreground text-sm">
-              Leveraging the latest technologies and frameworks for optimal performance
+              Expert in REST API & GraphQL integration with CMS platforms like Strapi and WordPress
             </p>
           </motion.div>
         </div>
 
-        {/* Certifications */}
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <GitBranch className="text-purple-500" />
-              Certifications & Learning
+              Education
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 gap-4">
-              {[
-                { name: "AWS Certified Developer", year: "2023", issuer: "Amazon" },
-                { name: "Meta React Developer", year: "2022", issuer: "Meta" },
-                { name: "Node.js Application Developer", year: "2021", issuer: "OpenJS Foundation" },
-                { name: "Full Stack Web Development", year: "2020", issuer: "freeCodeCamp" },
-              ].map((cert, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ x: 5 }}
-                  className="flex items-start gap-4 p-4 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold flex-shrink-0">
-                    ✓
+            <div className="grid md:grid-cols-1 gap-4">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ x: 5 }}
+                className="flex items-start gap-4 p-4 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+                  ✓
+                </div>
+                <div>
+                  <div className="font-semibold">Bachelor of Computer Applications</div>
+                  <div className="text-sm text-muted-foreground">
+                    JSS College for Women, Mysore, India • GPA: 8.4/10 • 2018 – 2021
                   </div>
-                  <div>
-                    <div className="font-semibold">{cert.name}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {cert.issuer} • {cert.year}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                </div>
+              </motion.div>
             </div>
           </CardContent>
         </Card>
