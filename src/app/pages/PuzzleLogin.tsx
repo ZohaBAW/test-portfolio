@@ -170,7 +170,7 @@ export default function PuzzleLogin() {
             className="text-center mb-12"
           >
             <h1 className="text-6xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
-              Welcome to Zoha's Portfolio 🚀
+              Welcome to Zoha's Portfolio 
             </h1>
             <p className="text-xl text-white/80 max-w-2xl">
               Solve the puzzle below to unlock my world.
